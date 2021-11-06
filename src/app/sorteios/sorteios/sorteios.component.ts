@@ -1,3 +1,5 @@
+import { SorteiosService } from './../services/sorteios.service';
+import { Sorteio } from './../model/sorteio';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SorteiosComponent implements OnInit {
 
-  constructor() { }
+  sorteios: Sorteio[] = [];
+  displayedColumns = ['nome', 'numeroSorteio', 'situacao'];
+
+  constructor(private sorteiosService: SorteiosService) {
+  // this.sorteiosService = new SorteiosService();
+
+  }
 
   ngOnInit(): void {
+    this.sorteios = this.sorteiosService.list();
   }
 
 }

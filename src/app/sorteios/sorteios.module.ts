@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SorteiosRoutingModule } from './sorteios-routing.module';
 import { SorteiosComponent } from './sorteios/sorteios.component';
-
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { SorteiosComponent } from './sorteios/sorteios.component';
   ],
   imports: [
     CommonModule,
-    SorteiosRoutingModule
+    SorteiosRoutingModule,
+    AppMaterialModule
   ]
 })
 export class SorteiosModule { }
